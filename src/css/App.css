@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Cutive&family=Kumbh+Sans:wght@200;700&family=Mohave&family=Mukta:wght@300&family=Nunito+Sans:ital,wght@0,300;0,400;1,400&family=PT+Serif&family=Quicksand:wght@300&family=Roboto+Mono:wght@200&family=Ubuntu+Condensed&display=swap');
+:root{
+    --gray-smooth:rgb(144, 143, 143);
+    --gray:rgb(163, 161, 161);
+    --gray-medium:rgb(156, 154, 154);
+    --dark:rgb(52, 26, 60);
+    --hover:rgb(105, 23, 135)
+}
+
+body{
+    background: linear-gradient(to top, rgb(169, 78, 179), rgb(255, 111, 171));
+    height: 100vh;
+    font-family: 'Quicksand';
+}
+
