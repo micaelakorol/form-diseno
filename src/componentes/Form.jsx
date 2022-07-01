@@ -3,7 +3,7 @@ import React from 'react'
 import useForm from '../hooks/useForm'
 import '../css/form.css'
 import {styles} from '../componentes/styles'
-import { initialForm } from './initialForm' //si hay problemas, copiar contenido aca como estaba.
+import { initialForm } from './initialForm' 
 
 
 const validationsForm = (form) => {
@@ -39,7 +39,6 @@ if(!form.name.trim()){
 return errors;
 }
 
-//onBlur = realiza la validacion del campo del input cuando se pierde el foco del input en el que estaba.
 const Form = () => {
     const {form,errors,handleBlur,handleChange,handleSubmit} = useForm(initialForm,validationsForm)
   return (
@@ -47,21 +46,37 @@ const Form = () => {
     <div className='contenedor-form'>
     <form onSubmit={handleSubmit} className='form'>
         <img src={require('../img/img.jpg')} alt="" className='imagen_logo'/>
-        <input type="text" name='name' placeholder='Nombre'autoComplete='off' onChange={handleChange}
-    onBlur={handleBlur} value={form.name} required
+        <input type="text" name='name'
+                  placeholder='Nombre'
+                  autoComplete='off'
+                  onChange={handleChange}
+                       onBlur={handleBlur}
+                            value={form.name} required
     />
         {errors.name && <p style={styles}>*{errors.name}</p>}
 
-    <input type="email" name='email' placeholder='name@example.com'  autoComplete='off' onChange={handleChange} onBlur={handleBlur} value={form.email} required
+    <input type="email" name='email' 
+       placeholder='name@example.com'  
+           autoComplete='off'
+            onChange={handleChange} 
+                onBlur={handleBlur} 
+                    value={form.email} required
 />
         {errors.email && <p style={styles}>*{errors.email}</p>}
 
-    <input type="text" name='subject' placeholder='Asunto' autoComplete='off' onChange={handleChange}
-onBlur={handleBlur} value={form.subject} required
+    <input type="text" name='subject'
+    placeholder='Asunto' 
+        autoComplete='off' 
+            onChange={handleChange}
+                onBlur={handleBlur} value={form.subject} required
 /> 
         {errors.subject && <p style={styles}>*{errors.subject}</p>}
 
-    <textarea name="comments" cols="50" rows="5" placeholder='Escribe tus comentarios' onChange={handleChange} onBlur={handleBlur} value={form.comments} required></textarea>
+    <textarea name="comments" cols="50" rows="5" 
+         placeholder='Escribe tus comentarios' 
+            onChange={handleChange} onBlur={handleBlur} 
+                value={form.comments} required></textarea>
+
         {errors.comments && <p style={styles}>{errors.comments}</p>}
         <b>Tú opinión nos interesa!</b>
     
