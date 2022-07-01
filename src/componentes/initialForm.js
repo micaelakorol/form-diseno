@@ -1,4 +1,4 @@
-//Valores iniciales del form (los name del input):
+//Initial values
 
 export const initialForm = {
 name:'',
